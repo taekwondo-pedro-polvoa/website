@@ -2,7 +2,7 @@
 title: "Does taekwondo training burn calories? What we know"
 date: 2026-10-07
 description: "How many calories does a taekwondo class burn? A simple estimate for adults, what changes from person to person and why consistency matters more."
-draft: true
+draft: false
 tags: ["health", "training", "adults"]
 author: "Taekwondo Pedro Póvoa"
 grafico:

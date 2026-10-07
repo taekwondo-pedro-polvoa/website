@@ -2,7 +2,7 @@
 title: "Treinar taekwondo queima calorias? O que se sabe"
 date: 2026-10-07
 description: "Quantas calorias gasta um treino de taekwondo? Uma estimativa simples para adultos, o que muda de pessoa para pessoa e porque a regularidade conta mais."
-draft: true
+draft: false
 tags: ["saude", "treino", "adultos"]
 author: "Taekwondo Pedro Póvoa"
 grafico:
