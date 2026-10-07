@@ -1,0 +1,16 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+{{ with hugo.Data.contacto }}
+<ul class="cards">
+  {{ with .local_treino }}<li><strong>{{ i18n "training_place" }}</strong><br>{{ . }}</li>{{ end }}
+  {{ with .morada }}<li><strong>{{ i18n "label_address" }}</strong><br>{{ . }}</li>{{ end }}
+  {{ with .telefone }}<li><strong>{{ i18n "label_phone" }}</strong><br><a href="tel:{{ replace . " " "" }}">{{ . }}</a></li>{{ end }}
+  {{ with .email }}<li><strong>{{ i18n "label_email" }}</strong><br><a href="mailto:{{ . }}">{{ . }}</a></li>{{ end }}
+  {{ if or .facebook .instagram }}<li><strong>{{ i18n "label_social" }}</strong><br>
+    {{ with .facebook }}<a href="{{ . }}" rel="noopener">Facebook</a>{{ end }}
+    {{ with .instagram }}<br><a href="{{ . }}" rel="noopener">Instagram</a>{{ end }}</li>{{ end }}
+</ul>
+{{ if not (or .telefone .email) }}<p class="note">{{ i18n "contact_cta_text" }}</p>{{ end }}
+{{ end }}
+{{ end }}

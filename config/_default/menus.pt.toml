@@ -1,0 +1,34 @@
+[[main]]
+  name = "A Academia"
+  pageRef = "/a-academia"
+  weight = 10
+
+[[main]]
+  name = "Turmas"
+  pageRef = "/turmas"
+  weight = 20
+
+[[main]]
+  name = "Horários"
+  pageRef = "/horarios"
+  weight = 30
+
+[[main]]
+  name = "Blog"
+  pageRef = "/blog"
+  weight = 40
+
+[[main]]
+  name = "Contactos"
+  pageRef = "/contactos"
+  weight = 50
+
+[[main]]
+  name = "Documentos"
+  pageRef = "/documentos"
+  weight = 45
+
+[[main]]
+  name = "Época 2026/2027"
+  pageRef = "/epoca-2026-27"
+  weight = 15

@@ -1,0 +1,11 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+<ul class="cards">
+  {{- range hugo.Data.documentos.documentos }}
+  {{- if not (fileExists (printf "static/%s" .ficheiro)) }}{{ errorf "documentos.yaml: missing file static/%s" .ficheiro }}{{ end }}
+  <li><strong>{{ partial "tr.html" (dict "item" . "key" "titulo") }}</strong><p>{{ partial "tr.html" (dict "item" . "key" "descricao") }}</p>
+    <a class="button" href="{{ .ficheiro | relURL }}" download>{{ i18n "download_pdf" }}</a></li>
+  {{- end }}
+</ul>
+{{ end }}

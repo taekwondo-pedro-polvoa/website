@@ -1,0 +1,9 @@
+# Training days and hours were not in the season letter: ask the Mestre. confirmado: false shows a notice.
+# Translatable fields carry an _en twin; layouts/partials/tr.html fails the build if it is missing.
+confirmado: false
+turmas:
+  - { nome: "Bambi", nome_en: "Bambi", dias: "A confirmar", dias_en: "To be confirmed", horas: "A confirmar", horas_en: "To be confirmed" }
+  - { nome: "Benjamins", nome_en: "Benjamins", dias: "A confirmar", dias_en: "To be confirmed", horas: "A confirmar", horas_en: "To be confirmed" }
+  - { nome: "Cadetes", nome_en: "Cadets", dias: "A confirmar", dias_en: "To be confirmed", horas: "A confirmar", horas_en: "To be confirmed" }
+  - { nome: "Juniores / Seniores", nome_en: "Juniors / Seniors", dias: "A confirmar", dias_en: "To be confirmed", horas: "A confirmar", horas_en: "To be confirmed" }
+  - { nome: "Competição", nome_en: "Competition", dias: "A confirmar", dias_en: "To be confirmed", horas: "A confirmar", horas_en: "To be confirmed" }

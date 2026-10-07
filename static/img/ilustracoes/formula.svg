@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300" role="img" aria-labelledby="t d">
+  <title id="t">Como estimar as calorias de um treino</title>
+  <desc id="d">METs vezes peso em quilogramas vezes horas é igual a quilocalorias. Exemplo: 10,3 vezes 70 vezes 1 dá cerca de 721 quilocalorias.</desc>
+  <rect width="800" height="300" rx="16" fill="#001a48"/>
+  <g font-family="Arial, Helvetica, sans-serif" font-weight="700" text-anchor="middle" fill="#ffffff">
+    <g fill="none" stroke="#ffffff" stroke-width="3"><rect x="40" y="65" width="150" height="90" rx="14"/><rect x="220" y="65" width="170" height="90" rx="14"/><rect x="420" y="65" width="140" height="90" rx="14"/></g>
+    <rect x="590" y="65" width="170" height="90" rx="14" fill="#f72502"/>
+    <text x="115" y="121" font-size="32">METs</text>
+    <text x="305" y="121" font-size="30">peso (kg)</text>
+    <text x="490" y="121" font-size="32">horas</text>
+    <text x="675" y="121" font-size="32">kcal</text>
+    <text x="205" y="122" font-size="40">×</text><text x="405" y="122" font-size="40">×</text><text x="575" y="122" font-size="40">=</text>
+    <text x="400" y="242" font-size="30" font-weight="400">Exemplo: 10,3 × 70 kg × 1 h ≈ 721 kcal</text>
+  </g>
+</svg>

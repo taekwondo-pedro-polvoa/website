@@ -1,0 +1,18 @@
+{{- /* Expects a pager (.Paginate); first post is featured on page 1. */ -}}
+{{- $pages := .Pages -}}
+{{- if and (eq .PageNumber 1) (gt (len $pages) 0) -}}
+  {{- $f := index $pages 0 -}}
+  <article class="featured">
+    <a class="cover-link" href="{{ $f.RelPermalink }}" tabindex="-1" aria-hidden="true">{{ partial "post-cover.html" $f }}</a>
+    <div class="body">
+      <p class="kicker">{{ i18n "featured" }}</p>
+      <h2><a href="{{ $f.RelPermalink }}">{{ $f.Title }}</a></h2>
+      <p class="meta"><time datetime="{{ $f.Date.Format "2006-01-02" }}">{{ $f.Date | time.Format ":date_long" }}</time> &middot; {{ i18n "reading_time" $f.ReadingTime }}</p>
+      {{ with $f.Description }}<p>{{ . }}</p>{{ end }}
+      {{ partial "tag-list.html" $f }}
+      <a class="button" href="{{ $f.RelPermalink }}">{{ i18n "read_article" }}</a>
+    </div>
+  </article>
+  {{- $pages = after 1 $pages -}}
+{{- end }}
+{{ if $pages }}<div class="post-grid">{{ range $pages }}{{ partial "post-card.html" . }}{{ end }}</div>{{ end }}

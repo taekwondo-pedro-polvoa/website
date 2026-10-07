@@ -1,0 +1,9 @@
+{{- /* Cover image of a post; branded striped panel when the post has no image. */ -}}
+{{- $img := "" -}}
+{{- with .Params.image }}{{ $img = $.Resources.GetMatch . }}{{ end -}}
+{{- if $img }}
+  {{- $f := $img.Fill "960x540 q80" -}}
+  <img class="cover" src="{{ $f.RelPermalink }}" alt="{{ $.Params.image_alt }}" width="{{ $f.Width }}" height="{{ $f.Height }}" loading="lazy">
+{{- else }}
+  <div class="cover cover-default" aria-hidden="true"><span>{{ with index .Params.tags 0 }}{{ . }}{{ else }}Taekwondo{{ end }}</span></div>
+{{- end }}

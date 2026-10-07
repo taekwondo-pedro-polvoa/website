@@ -1,0 +1,34 @@
+# baseURL carries the /website/ subpath of the GitHub project site; layouts must use relURL/absURL.
+baseURL = "https://taekwondo-pedro-polvoa.github.io/website/"
+title = "Taekwondo Pedro Póvoa"
+defaultContentLanguage = "pt"
+defaultContentLanguageInSubdir = false
+enableRobotsTXT = true
+
+[pagination]
+  pagerSize = 10
+
+[taxonomies]
+  tag = "tags"
+
+[outputs]
+  home = ["HTML"]
+  page = ["HTML"]
+  section = ["HTML", "RSS"]
+
+[params]
+  # Preview phase: keep search engines out. Set to false (and remove this line) at launch.
+  noindex = true
+  description = "Academia de taekwondo do Pedro Póvoa, no Porto."
+
+# pt is the default; en is enabled. To add es: add a [languages.es] block, menus.es.toml and content/*.es.md.
+[languages]
+  [languages.pt]
+    label = "Português"
+    locale = "pt-PT"
+    weight = 1
+
+  [languages.en]
+    label = "English"
+    locale = "en-GB"
+    weight = 2

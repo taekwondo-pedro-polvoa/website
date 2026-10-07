@@ -1,0 +1,14 @@
+# Only blank or public documents. Never list documents with athlete names or personal data here.
+# `ficheiro` is relative to static/ and must exist (layouts/_default/documentos.html fails the build otherwise).
+# The PDFs themselves are Portuguese only.
+documentos:
+  - titulo: "Carta de apresentação da época 2026/2027"
+    titulo_en: "Season 2026/2027 introduction letter (Portuguese)"
+    descricao: "Projeto, escalões, local de treino e mensalidades."
+    descricao_en: "The project, age groups, training location and monthly fees."
+    ficheiro: "downloads/carta-apresentacao-epoca-2026-27.pdf"
+  - titulo: "Ficha de inscrição 2026/2027"
+    titulo_en: "Enrolment form 2026/2027 (Portuguese)"
+    descricao: "Formulário em branco para inscrição ou revalidação. Inclui a autorização de captação e utilização de imagem. Imprimir, preencher e entregar ao treinador."
+    descricao_en: "Blank form for enrolment or renewal, including the image-use authorisation. Print, fill in and hand it to the trainer."
+    ficheiro: "downloads/ficha-inscricao-epoca-2026-27.pdf"

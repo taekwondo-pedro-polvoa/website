@@ -1,0 +1,5 @@
+<nav class="crumbs" aria-label="breadcrumb"><ol>
+  <li><a href="{{ site.Home.RelPermalink }}">{{ i18n "home" }}</a></li>
+  <li><a href="{{ (site.GetPage "/blog").RelPermalink }}">Blog</a></li>
+  {{ if .IsPage }}<li aria-current="page">{{ .Title }}</li>{{ end }}
+</ol></nav>

@@ -1,0 +1,1 @@
+{{ with .Params.tags }}<ul class="chips">{{ range . }}<li><a href="{{ (printf "tags/%s/" (. | urlize)) | relLangURL }}">{{ . }}</a></li>{{ end }}</ul>{{ end }}

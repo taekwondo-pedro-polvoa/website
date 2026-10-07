@@ -1,0 +1,9 @@
+<article class="post-card">
+  <a class="cover-link" href="{{ .RelPermalink }}" tabindex="-1" aria-hidden="true">{{ partial "post-cover.html" . }}</a>
+  <div class="body">
+    <p class="meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time> &middot; {{ i18n "reading_time" .ReadingTime }}</p>
+    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    {{ with .Description }}<p>{{ . }}</p>{{ end }}
+    <a class="read" href="{{ .RelPermalink }}">{{ i18n "read_article" }} &rarr;</a>
+  </div>
+</article>

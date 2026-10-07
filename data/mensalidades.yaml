@@ -1,0 +1,11 @@
+# Source: "Carta de Apresentação - Época 26/27".
+prazo: "Mensalidade paga até ao dia 8 de cada mês."
+prazo_en: "Monthly fee is paid by the 8th of each month."
+descontos: "Descontos para irmãos, mediante pedido."
+descontos_en: "Sibling discounts available on request."
+precos:
+  - { frequencia: "1 treino por semana", frequencia_en: "1 session per week", valor: "30 €", valor_en: "€30" }
+  - { frequencia: "2 treinos por semana", frequencia_en: "2 sessions per week", valor: "35 €", valor_en: "€35" }
+  - { frequencia: "3 treinos por semana", frequencia_en: "3 sessions per week", valor: "40 €", valor_en: "€40" }
+  - { frequencia: "4 treinos por semana", frequencia_en: "4 sessions per week", valor: "45 €", valor_en: "€45" }
+  - { frequencia: "5 treinos por semana", frequencia_en: "5 sessions per week", valor: "50 €", valor_en: "€50" }

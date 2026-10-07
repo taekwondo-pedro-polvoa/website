@@ -1,0 +1,6 @@
+{{ with hugo.Data.contacto }}
+<ul class="cards">
+  <li><strong>{{ i18n "training_place" }}</strong><br>{{ .local_treino }}</li>
+  <li>{{ .telefone }}<br>{{ .email }}</li>
+</ul>
+{{ end }}

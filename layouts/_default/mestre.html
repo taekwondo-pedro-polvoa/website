@@ -1,0 +1,23 @@
+{{ define "main" }}
+{{- /* Published pages show only "confirmado" facts; drafts show everything with its state so gaps stay visible. */ -}}
+{{ $page := . }}
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+{{ with hugo.Data.mestre }}
+{{ $factos := .factos }}
+{{ range .grupos }}
+  {{ $g := .id }}
+  {{ $titulo := .titulo }}
+  {{ $items := where $factos "grupo" $g }}
+  {{ if not $page.Draft }}{{ $items = where $items "estado" "confirmado" }}{{ end }}
+  {{ with $items }}
+<h2>{{ $titulo }}</h2>
+<ul class="cards">
+    {{- range . }}
+  <li>{{ .texto }}{{ if $page.Draft }}<br><span class="meta">[{{ .estado }}] Fonte: {{ .fonte }}</span>{{ end }}</li>
+    {{- end }}
+</ul>
+  {{ end }}
+{{ end }}
+{{ end }}
+{{ end }}

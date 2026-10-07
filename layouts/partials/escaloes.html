@@ -1,0 +1,9 @@
+{{ with hugo.Data.turmas }}
+<h2>{{ i18n "age_groups" }} {{ partial "tr.html" (dict "item" . "key" "epoca") }}</h2>
+<ul class="cards">
+  {{- range .escaloes }}
+  <li style="--tone: {{ .cor | default "#f72502" }}"><strong>{{ partial "tr.html" (dict "item" . "key" "nome") }}</strong><br>{{ partial "tr.html" (dict "item" . "key" "idades") }}<br><span class="meta">{{ if not .livre }}{{ i18n "born_in" }} {{ end }}{{ partial "tr.html" (dict "item" . "key" "nascimento") }}</span><p>{{ partial "tr.html" (dict "item" . "key" "descricao") }}</p></li>
+  {{- end }}
+</ul>
+<p class="note">{{ partial "tr.html" (dict "item" . "key" "nota") }}</p>
+{{ end }}

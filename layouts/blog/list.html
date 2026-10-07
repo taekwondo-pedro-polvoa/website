@@ -1,0 +1,18 @@
+{{ define "main" }}
+<header class="page-head">
+  {{ partial "breadcrumb.html" . }}
+  <p class="kicker">{{ i18n "blog_kicker" }}</p>
+  <h1>{{ .Title }}</h1>
+  {{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}
+  <ul class="chips">
+    <li><a href="{{ .RelPermalink }}" aria-current="page">{{ i18n "all_tags" }}</a></li>
+    {{- range site.Taxonomies.tags.Alphabetical }}<li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }} <small>{{ .Count }}</small></a></li>{{ end }}
+    {{- with .OutputFormats.Get "RSS" }}<li><a href="{{ .RelPermalink }}">{{ i18n "rss" }}</a></li>{{ end }}
+  </ul>
+  <input type="search" id="blog-search" class="search" placeholder="{{ i18n "search_placeholder" }}" aria-label="{{ i18n "search_placeholder" }}" hidden>
+  <p id="blog-empty" class="note" hidden>{{ i18n "no_results" }}</p>
+</header>
+{{ $pager := .Paginate .Pages }}
+{{ if $pager.Pages }}{{ partial "blog-grid.html" $pager }}{{ else }}<p>{{ i18n "no_posts" }}</p>{{ end }}
+{{ partial "pagination.html" . }}
+{{ end }}

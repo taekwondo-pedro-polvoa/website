@@ -1,0 +1,8 @@
+{{ with hugo.Data.horarios }}
+<ul class="cards">
+  {{- range .turmas }}
+  <li><strong>{{ partial "tr.html" (dict "item" . "key" "nome") }}</strong><br>{{ partial "tr.html" (dict "item" . "key" "dias") }} &middot; {{ partial "tr.html" (dict "item" . "key" "horas") }}</li>
+  {{- end }}
+</ul>
+{{ if not .confirmado }}<p class="note">{{ i18n "schedule_note" }}</p>{{ end }}
+{{ end }}

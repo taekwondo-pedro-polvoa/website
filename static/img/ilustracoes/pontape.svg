@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" role="img" aria-labelledby="t d">
+  <title id="t">Praticante de taekwondo a executar um pontapé alto</title>
+  <desc id="d">Figura branca em traço, sobre fundo azul-escuro com faixas vermelhas, a dar um pontapé alto, com uma chama ao lado.</desc>
+  <rect width="800" height="450" fill="#001a48"/>
+  <g fill="#f72502"><polygon points="0,270 800,180 800,206 0,296"/><polygon points="0,322 800,246 800,258 0,334"/></g>
+  <g fill="none" stroke="#ffffff" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M380 250 L370 322 L362 388"/>
+    <path d="M380 250 L352 160"/>
+    <path d="M380 250 L470 218 L612 158"/>
+    <path d="M356 175 L304 205 L262 182"/>
+    <path d="M356 175 L322 236 L290 266"/>
+    <path d="M340 388 L396 388"/>
+  </g>
+  <circle cx="336" cy="122" r="30" fill="#ffffff"/>
+  <path d="M120 408 H680" stroke="#f72502" stroke-width="6" stroke-linecap="round"/>
+  <path d="M690 250 C728 300 748 332 712 384 C670 408 636 366 654 324 C666 344 676 344 682 334 C672 304 678 278 690 250 Z" fill="#f72502"/>
+  <path d="M692 320 C708 342 714 360 696 376 C678 378 670 360 680 344 C686 352 690 350 692 344 Z" fill="#ffffff"/>
+</svg>

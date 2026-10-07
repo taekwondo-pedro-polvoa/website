@@ -1,0 +1,10 @@
+{{ define "main" }}
+<header class="page-head">
+  <p class="kicker">{{ i18n "tags" }}</p>
+  <h1>{{ .Title }}</h1>
+  <p><a href="{{ (site.GetPage "/blog").RelPermalink }}">&larr; {{ i18n "back_to_blog" }}</a></p>
+</header>
+{{ $pager := .Paginate .Pages }}
+<div class="post-grid">{{ range $pager.Pages }}{{ partial "post-card.html" . }}{{ end }}</div>
+{{ partial "pagination.html" . }}
+{{ end }}

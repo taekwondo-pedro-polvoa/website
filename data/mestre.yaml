@@ -1,0 +1,62 @@
+# Single source of facts about the Mestre, used by layouts/_default/mestre.html.
+# estado: confirmado = vem de documento do clube ou do Mestre (publica-se);
+#         validar    = fonte publica, falta o Mestre confirmar (nao se publica);
+#         lacuna     = falta o dado (nao se publica).
+# A pagina so mostra "confirmado" quando deixa de ser rascunho; ver docs/pesquisa-mestre.md.
+grupos:
+  - id: palmares
+    titulo: "Percurso desportivo"
+  - id: formacao
+    titulo: "Formação e graduação"
+  - id: treinador
+    titulo: "Como treinador"
+
+factos:
+  - grupo: palmares
+    texto: "Atleta olímpico português, 7.º classificado nos Jogos Olímpicos de Pequim 2008."
+    estado: confirmado
+    fonte: "Carta de Apresentação - Época 26/27"
+  - grupo: palmares
+    texto: "Primeiro atleta português de taekwondo nos Jogos Olímpicos (Pequim 2008, -58 kg)."
+    estado: validar
+    fonte: "Wikipedia; RTP"
+  - grupo: palmares
+    texto: "Medalha de bronze no Campeonato da Europa de 2004, em Lillehammer (-54 kg)."
+    estado: validar
+    fonte: "Wikipedia"
+  - grupo: palmares
+    texto: "Medalha de ouro nos Jogos da Lusofonia de 2009, em Lisboa (-58 kg)."
+    estado: validar
+    fonte: "Wikipedia; RTP"
+  - grupo: palmares
+    texto: "Líder do ranking europeu de -58 kg em 2010."
+    estado: validar
+    fonte: "RTP"
+  - grupo: palmares
+    texto: "Campeão nacional durante 15 anos. Falta a lista de anos."
+    estado: validar
+    fonte: "RTP"
+  - grupo: palmares
+    texto: "A PREENCHER: outros resultados (Mundiais, Opens, seleção nacional) e clubes por época (Boavista, Sporting de Braga, outros)."
+    estado: lacuna
+    fonte: "Mestre (questionário, secção 3)"
+  - grupo: formacao
+    texto: "A PREENCHER: grau (Dan), entidade que o atribuiu e ano."
+    estado: lacuna
+    fonte: "Mestre (questionário, secção 2); diploma ou cartão"
+  - grupo: formacao
+    texto: "A PREENCHER: formação académica (Universidade do Minho? Psicologia?)."
+    estado: lacuna
+    fonte: "Mestre (questionário, secção 2)"
+  - grupo: formacao
+    texto: "A PREENCHER: cursos de treinador (nível, entidade, ano)."
+    estado: lacuna
+    fonte: "Mestre (questionário, secção 2)"
+  - grupo: treinador
+    texto: "Treinador de taekwondo; lidera o projeto Taekwondo Pedro Póvoa a partir da época 2026/2027."
+    estado: confirmado
+    fonte: "Carta de Apresentação - Época 26/27"
+  - grupo: treinador
+    texto: "A PREENCHER: desde quando treina e onde (escolas, universidades, clubes)."
+    estado: lacuna
+    fonte: "Mestre (questionário, secção 4)"

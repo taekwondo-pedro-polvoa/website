@@ -1,0 +1,21 @@
+{{ define "main" }}
+<article class="post">
+  <header class="post-head">
+    {{ partial "breadcrumb.html" . }}
+    <h1>{{ .Title }}</h1>
+    <p class="meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time> &middot; {{ i18n "reading_time" .ReadingTime }}{{ with .Params.author }} &middot; {{ i18n "by" }} {{ . }}{{ end }}</p>
+    {{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}
+  </header>
+  {{ if .Params.image }}<figure class="post-cover">{{ partial "post-cover.html" . }}</figure>{{ end }}
+  <div class="prose">{{ .Content }}</div>
+  <footer class="post-foot">
+    {{ partial "tag-list.html" . }}
+    <nav class="pager" aria-label="{{ i18n "all_posts" }}">
+      {{ with .NextInSection }}<a class="prev" href="{{ .RelPermalink }}"><small>&larr; {{ i18n "prev_post" }}</small><span>{{ .Title }}</span></a>{{ end }}
+      {{ with .PrevInSection }}<a class="next" href="{{ .RelPermalink }}"><small>{{ i18n "next_post" }} &rarr;</small><span>{{ .Title }}</span></a>{{ end }}
+    </nav>
+  </footer>
+</article>
+{{ $more := first 3 (where (where site.RegularPages "Section" "blog") "Permalink" "ne" .Permalink) }}
+{{ if $more }}<section class="more-posts"><h2>{{ i18n "more_posts" }}</h2><div class="post-grid">{{ range $more }}{{ partial "post-card.html" . }}{{ end }}</div></section>{{ end }}
+{{ end }}

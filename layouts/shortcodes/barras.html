@@ -1,0 +1,18 @@
+{{- /* Horizontal bar chart from the page front matter (params.grafico). Plain HTML so it follows the light/dark theme and reads as a list for screen readers. */ -}}
+{{ with .Page.Params.grafico }}
+{{ $max := 0 }}
+{{ range .itens }}{{ if gt .kcal $max }}{{ $max = .kcal }}{{ end }}{{ end }}
+<figure class="barras">
+  <figcaption>{{ .titulo }}</figcaption>
+  <ul>
+    {{- range .itens }}
+    <li>
+      <span class="barras-nome">{{ .nome }}</span>
+      <span class="barras-barra" aria-hidden="true"><i style="width: {{ div (mul .kcal 100) $max }}%"></i></span>
+      <span class="barras-valor">{{ .kcal }} kcal</span>
+    </li>
+    {{- end }}
+  </ul>
+  {{ with .nota }}<p class="meta">{{ . }}</p>{{ end }}
+</figure>
+{{ end }}

@@ -1,0 +1,5 @@
+{{- /* Illustration from static/: src is relative to the site root, alt is required. */ -}}
+<figure class="figura">
+  <img src="{{ .Get "src" | relURL }}" alt="{{ .Get "alt" }}" width="{{ .Get "largura" | default 800 }}" height="{{ .Get "altura" | default 450 }}" loading="lazy">
+  {{ with .Get "legenda" }}<figcaption class="meta">{{ . }}</figcaption>{{ end }}
+</figure>

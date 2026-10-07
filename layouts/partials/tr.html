@@ -1,0 +1,7 @@
+{{- /* Returns data field `key` of `item` in the current language: pt uses `key`, others use `key_<lang>`. A missing translation fails the build instead of silently showing Portuguese. */ -}}
+{{- $v := index .item .key -}}
+{{- if ne site.Language.Lang "pt" -}}
+  {{- $v = index .item (printf "%s_%s" .key site.Language.Lang) -}}
+  {{- if not $v }}{{ errorf "data: missing %s_%s (pt value: %v)" .key site.Language.Lang (index .item .key) }}{{ end -}}
+{{- end -}}
+{{- return $v -}}

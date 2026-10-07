@@ -1,0 +1,42 @@
+{{ define "main" }}
+<section class="hero">
+  <div class="grain" aria-hidden="true"></div>
+  <div class="inner">
+    <p class="kicker">{{ i18n "hero_kicker" }}</p>
+    <h1>{{ i18n "hero_title" }}</h1>
+    <p>{{ .Content | plainify }}</p>
+    <div class="actions">
+      <a class="button" href="{{ (site.GetPage "/contactos").RelPermalink }}">{{ i18n "contact_cta" }}</a>
+      <a class="more" href="{{ (site.GetPage "/epoca-2026-27").RelPermalink }}">{{ i18n "season_link" }} &rarr;</a>
+    </div>
+  </div>
+</section>
+<div class="ticker" aria-hidden="true"><div class="ticker-track">
+  {{- range seq 8 }}<span>{{ i18n "ticker" }}</span><span>&#9670;</span>{{ end }}
+</div></div>
+<ul class="stats reveal">
+  <li><strong>7.º</strong><span>{{ i18n "stat_olympic" }}</span></li>
+  <li><strong>{{ len hugo.Data.turmas.escaloes }}</strong><span>{{ i18n "stat_groups" }}</span></li>
+  <li><strong>{{ i18n "stat_age_value" }}</strong><span>{{ i18n "stat_age" }}</span></li>
+</ul>
+<section class="reveal leader">
+  <img src="{{ "img/pedro-povoa.jpg" | relURL }}" alt="{{ i18n "leader_photo_alt" }}" width="640" height="640" loading="lazy">
+  <div>
+    <h2>{{ i18n "leader_title" }}</h2>
+    <p>{{ i18n "leader_text" }}</p>
+  </div>
+</section>
+<section class="reveal">
+  <h2>{{ i18n "schedule" }}</h2>
+  {{ partial "horario.html" . }}
+</section>
+<section class="reveal">
+  {{ partial "escaloes.html" . }}
+</section>
+<section class="reveal">
+  <h2>{{ i18n "latest_posts" }}</h2>
+  {{ $posts := first 3 (where site.RegularPages "Section" "blog") }}
+  {{ if $posts }}<div class="post-grid">{{ range $posts }}{{ partial "post-card.html" . }}{{ end }}</div>{{ else }}<p>{{ i18n "no_posts" }}</p>{{ end }}
+  <p><a href="{{ (site.GetPage "/blog").RelPermalink }}">{{ i18n "all_posts" }}</a></p>
+</section>
+{{ end }}

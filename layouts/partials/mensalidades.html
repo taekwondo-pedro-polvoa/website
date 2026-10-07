@@ -1,0 +1,9 @@
+{{ with hugo.Data.mensalidades }}
+<h2>{{ i18n "fees" }}</h2>
+<ul class="cards">
+  {{- range .precos }}
+  <li><strong>{{ partial "tr.html" (dict "item" . "key" "valor") }}</strong><br>{{ partial "tr.html" (dict "item" . "key" "frequencia") }}</li>
+  {{- end }}
+</ul>
+<p class="note">{{ partial "tr.html" (dict "item" . "key" "prazo") }} {{ partial "tr.html" (dict "item" . "key" "descontos") }}</p>
+{{ end }}

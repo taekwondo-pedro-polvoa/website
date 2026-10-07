@@ -1,0 +1,18 @@
+{{ define "main" }}
+<article>
+  <h1>{{ .Title }}</h1>
+  {{ if eq .Section "blog" }}
+  <p class="meta">
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ i18n "published_on" }} {{ .Date | time.Format ":date_long" }}</time>
+    {{ with .Params.author }} &middot; {{ i18n "by" }} {{ . }}{{ end }}
+  </p>
+  {{ with .Resources.GetMatch .Params.image }}
+  <img src="{{ .RelPermalink }}" alt="{{ $.Params.image_alt }}" width="{{ .Width }}" height="{{ .Height }}">
+  {{ end }}
+  {{ end }}
+  {{ .Content }}
+  {{ with .GetTerms "tags" }}
+  <p class="meta">{{ i18n "tags" }}: {{ range . }}<a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a> {{ end }}</p>
+  {{ end }}
+</article>
+{{ end }}

@@ -1,0 +1,7 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+{{ with hugo.Data.documentos.documentos }}{{ with index . 0 }}
+<p><a class="button" href="{{ .ficheiro | relURL }}" download>{{ i18n "download_pdf" }}</a></p>
+{{ end }}{{ end }}
+{{ end }}
