@@ -1,0 +1,38 @@
+<!doctype html>
+<!-- Source of static/img/share-card.png (link preview for WhatsApp, Facebook, etc).
+     Regenerate: google-chrome --headless=new --no-sandbox --hide-scrollbars --window-size=1200,760 --screenshot=/tmp/card-full.png file://$PWD/scripts/share-card.html && python3 -c "from PIL import Image; Image.open('/tmp/card-full.png').crop((0,0,1200,630)).save('static/img/share-card.png')" -->
+<meta charset="utf-8">
+<style>
+@font-face { font-family: BC; font-style: italic; font-weight: 800; src: url("../static/fonts/barlow-condensed-latin-800-italic.woff2"); }
+@font-face { font-family: BC; font-style: normal; font-weight: 700; src: url("../static/fonts/barlow-condensed-latin-700-normal.woff2"); }
+html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
+body { position: relative; background: #001a48; font-family: BC, sans-serif; color: #fff; }
+.stripe { position: absolute; left: -200px; width: 1700px; background: #f72502; transform: rotate(-9deg); }
+.s1 { top: 150px; height: 26px; box-shadow: 0 46px 0 #f72502; }
+.s2 { top: 470px; height: 14px; box-shadow: 0 26px 0 #f72502; }
+.logo { position: absolute; left: 60px; top: 48px; height: 96px; background: #fff; padding: 8px 18px; border-radius: 10px; }
+.txt { position: absolute; left: 60px; top: 180px; width: 700px; }
+.kick { font-weight: 700; letter-spacing: .3em; text-transform: uppercase; font-size: 30px; color: #ffb4a3; }
+h1 { margin: 6px 0 0; font-style: italic; font-weight: 800; text-transform: uppercase; font-size: 138px; line-height: .92; text-shadow: 6px 6px 0 rgba(247,37,2,.9); }
+.sub { margin-top: 26px; font-weight: 700; font-size: 40px; letter-spacing: .08em; text-transform: uppercase; background: #f72502; display: inline-block; padding: 4px 22px; transform: skewX(-10deg); }
+svg { position: absolute; right: 30px; top: 0; height: 630px; }
+</style>
+<div class="stripe s1"></div><div class="stripe s2"></div>
+<img class="logo" src="../static/img/logo.png" alt="">
+<div class="txt"><div class="kick">Porto · Época 2026/2027</div><h1>Taekwondo<br>Pedro Póvoa</h1><div class="sub">Do Bambi à Competição</div></div>
+<svg viewBox="0 0 440 630" width="440" height="630">
+  <g stroke="#f72502" stroke-width="10" stroke-linecap="round"><path d="M392 60 L372 112"/><path d="M340 40 L330 100"/><path d="M420 150 L384 160"/></g>
+  <path d="M352 96 L340 124 L368 122 L350 156 L384 134 L376 100 Z" fill="#f72502"/>
+  <g fill="none" stroke="#fff" stroke-width="30" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M230 384 L222 486 L214 590"/>
+    <path d="M230 384 L312 292 L338 152"/>
+    <path d="M338 152 L366 134"/>
+    <path d="M196 262 L230 384"/>
+    <path d="M196 262 L246 308 L270 268"/>
+    <path d="M196 262 L142 292 L112 244"/>
+    <path d="M214 590 L270 596"/>
+  </g>
+  <circle cx="176" cy="206" r="40" fill="#fff"/>
+  <path d="M212 366 L248 372" stroke="#f72502" stroke-width="16" stroke-linecap="round"/>
+  <path d="M90 612 H400" stroke="#f72502" stroke-width="8" stroke-linecap="round"/>
+</svg>
