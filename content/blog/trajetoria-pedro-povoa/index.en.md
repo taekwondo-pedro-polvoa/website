@@ -4,6 +4,8 @@ date: 2026-10-07
 description: "Who Pedro Póvoa is, a Portuguese Olympic athlete at Beijing 2008, and the taekwondo project he leads in Porto."
 tags: ["mestre", "history"]
 author: "Taekwondo Pedro Póvoa"
+image: "pedro-povoa.jpg"
+image_alt: "Pedro Póvoa in a white dobok performing a high kick on a cliff above the sea."
 ---
 
 Pedro Póvoa is a Portuguese Olympic athlete and taekwondo coach. At the 2008 Olympic Games in Beijing he finished **7th**. Today he is the technical director and head coach of Taekwondo Pedro Póvoa, in Porto.

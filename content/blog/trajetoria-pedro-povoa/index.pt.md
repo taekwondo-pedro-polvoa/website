@@ -4,6 +4,8 @@ date: 2026-10-07
 description: "Quem é Pedro Póvoa, atleta olímpico português em Pequim 2008, e o projeto de taekwondo que lidera no Porto."
 tags: ["mestre", "historia"]
 author: "Taekwondo Pedro Póvoa"
+image: "pedro-povoa.jpg"
+image_alt: "Pedro Póvoa de dobok branco a executar um pontapé alto numa falésia sobre o mar."
 ---
 
 Pedro Póvoa é atleta olímpico português e treinador de taekwondo. Em 2008, nos Jogos Olímpicos de Pequim, terminou em **7.º lugar**. Hoje, é o diretor técnico e treinador principal da Taekwondo Pedro Póvoa, no Porto.
